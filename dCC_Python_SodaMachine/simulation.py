@@ -11,7 +11,6 @@ class Simulation:
         """The central method called in main.py."""
         customer = Customer()
         soda_machine = SodaMachine()
-        backpack = Backpack()
         will_proceed = True
         while will_proceed:
             user_option = user_interface.simulation_main_menu()
@@ -20,6 +19,6 @@ class Simulation:
             elif user_option == 2:
                 customer.check_coins_in_wallet()
             elif user_option == 3:
-                customer.check_backpack(backpack)
+                customer.check_backpack()
             else:
                 will_proceed = False

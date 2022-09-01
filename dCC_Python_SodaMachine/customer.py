@@ -28,7 +28,7 @@ class Customer:
     def get_wallet_coin(self, coin_name):
         """Method responsible for retrieving a single coin from wallet's money list"""
         for coin in self.wallet.money:
-            if coin.name == coin.name:
+            if coin.name == coin_name:
                 self.wallet.money.remove(coin)
                 return coin
         return None
@@ -59,9 +59,9 @@ class Customer:
         total_value = round(total_value, -2)
         user_interface.display_customer_wallet_info(coins_quantity, total_value)
 
-    def check_backpack(backpack):
+    def check_backpack(self, backpack):
         """Will display the cans contained in purchased_cans list in backpack"""
-        if backpack.purchased_cans.length > 0:
+        if len(backpack.purchased_cans) == 0:
             user_interface.output_text("You have no cans in your backpack")
         else:
             for can in backpack.purchased_cans:

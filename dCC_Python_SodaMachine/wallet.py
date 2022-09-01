@@ -6,12 +6,13 @@ class Wallet:
 
     def fill_wallet(self):
         """Method will fill wallet's money list with certain amount of each type of coin when called."""
-        self.money = []
-        for index in range(8):
-            self.money.append(coins.Quarter())
-        for index in range(10):
-            self.money.append(coins.Dime())
-        for index in range(20):
-            self.money.append(coins.Nickel())
-        for index in range(50):
-            self.money.append(coins.Penny())
+        money = []
+        for _ in range(8):
+            money.append(coins.Quarter())
+        for _ in range(10):
+            money.append(coins.Dime())
+        for _ in range(20):
+            money.append(coins.Nickel())
+        for _ in range(50):
+            money.append(coins.Penny())
+        return money
